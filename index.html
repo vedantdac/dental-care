@@ -7,7 +7,16 @@
     <title>Dental Clinic</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "bVOJhzqvkBvF660gf",
+            });
+        })();
+    </script>
+    <script src="appointment.js"></script>
 </head>
 
 <body>
@@ -134,15 +143,18 @@
                     <form id="appointmentForm">
                         <div class="form-group">
                             <label for="fullName">Full Name</label>
-                            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                            <input type="text" class="form-control" id="fullName" name="fullName"
+                                placeholder="Enter your full name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email address" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            <input type="tel" class="form-control" id="phone" name="phone"
+                                placeholder="Enter your phone number" required>
                         </div>
                         <div class="form-group">
                             <label for="date">Preferred Date</label>
@@ -154,13 +166,15 @@
                         </div>
                         <div class="form-group">
                             <label for="reason">Reason for Visit</label>
-                            <textarea class="form-control" id="reason" name="reason" rows="3" placeholder="Briefly describe the reason for your visit" required></textarea>
+                            <textarea class="form-control" id="reason" name="reason" rows="3"
+                                placeholder="Briefly describe the reason for your visit" required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="notes">Additional Notes</label>
-                            <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Any additional information or requests"></textarea>
+                            <textarea class="form-control" id="notes" name="notes" rows="3"
+                                placeholder="Any additional information or requests"></textarea>
                         </div>
-                        <button type="button" class="btn btn-primary" onclick="sendEmail()">Send Email</button>
+                        <button class="btn-primary" type="button" onclick="sendMail()">Book Appointment</button>
                     </form>
                 </div>
             </div>
@@ -188,9 +202,8 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="appointment.js"></script>
-    <!-- <script src="https://unpkg.com/smtp.js/dist/smtp.min.js"></script> -->
-    <!-- <script src="appointment.js"></script> -->
+
+
 </body>
 
 </html>
