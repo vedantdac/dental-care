@@ -20,8 +20,9 @@ function sendMail() {
         Additional Information: ${data.notes}
     `;
     // Send email via EmailJS
-    emailjs.send('service_g1v3izr', 'template_x7n887s', {
+    emailjs.send('service_r70utsr', 'template_ld19wvl', {
         to_email: 'vedantdac@gmail.com', // Replace with your email address
+        reply_to: data.email,
         subject: 'New Appointment Booking Request',
         message: emailBody
     })
