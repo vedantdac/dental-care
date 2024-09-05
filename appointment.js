@@ -21,7 +21,7 @@ function sendMail() {
     `;
     // Send email via EmailJS
     emailjs.send('service_g1v3izr', 'template_x7n887s', {
-        to_email: 'vendantdac@gmail.com', // Replace with your email address
+        to_email: 'vedantdac@gmail.com', // Replace with your email address
         subject: 'New Appointment Booking Request',
         message: emailBody
     })
